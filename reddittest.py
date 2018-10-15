@@ -45,6 +45,7 @@ with open('test.txt', mode='w') as reddit_file:
         "Initialize variables for writing comments"
         post_body = submission.selftext
         title = ""
+        submission.comments.replace_more()
         all_comments = submission.comments.list()
         for comment in all_comments:
             body = comment.body
